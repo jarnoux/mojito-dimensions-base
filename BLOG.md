@@ -56,3 +56,5 @@ Done. As you can see, the `extrabutton/` directory structure mirrors your base a
 
 Et voila! If you now define `mojito-dimensions-experiment_searchbox` as a dependency of you app, the file loaded when your request matches the `extrabutton` configuration will be the one from the `extrabutton` package, _not_ the baseline!
 You can now easily develop experiment packages that you can test and maintain outside your baseline app, activate and deactivate at will, and merge easily when you determine you have a winner.
+
+Jacques Arnoux (arnoux [at] yahoo-inc [dot] com) & David Gomez (dgomez [at] yahoo-inc [dot] com) for Yahoo! Search Front-End Platform
