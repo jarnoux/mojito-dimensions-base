@@ -30,7 +30,7 @@ search-apps-news
 `-- application.json
 ```
 
-That's the base application, that's the forest. Now, say you want to try changing the view of the search box to add a button for some users to see how they react. You will want to change `search-apps-news/mojits/SearchBox/views/index.html`. Right? 
+That's the base application, that's the forest. Now, say you want to try changing the view of the search box to add a button for some users to see how they react, but you also want to keep the mainline version to be served to most of the users, so you can compare both sets of users simultaneously. You will want to change `search-apps-news/mojits/SearchBox/views/index.html`. Right? 
 
 ## Well no.
 This is a recipe for a spaghetti code disaster when you have 40 experiments on that search box. Besides, the logic that decides what user should get what view should be reusable and in the app framework (not your app). If you believe that, then [mojito-dimensions-base](https://github.com/yahoo/mojito-dimensions-base) just became your best friend. By including that package in the package containing your experiments, you can then create "mask packages" that mimic the structure of your app _only for those files that you want to override for that experiment_.
